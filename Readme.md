@@ -4,7 +4,7 @@
 
 ## How to use
 
-**To use the projject just clone it or download the python fiel and run it in a terminal**
+**To use the projject just clone it or download the python fiel and run it in a terminal or for even better experience run it in powershell**
 
 **Choose the 'x' or 'o' for the first player the second eill be assigned the other value**
 
