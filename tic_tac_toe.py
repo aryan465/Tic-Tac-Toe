@@ -3,8 +3,12 @@
 def tic_tac_toe():
     print("********______TIC TAC TOE______*********")
     print("")
+
+    # The grid
     grid = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     # grid = ["Null", " ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+    # Defining the Win conditions
 
     def if_won(grid):
         if grid[1] == grid[2] == grid[3]:
@@ -28,6 +32,8 @@ def tic_tac_toe():
         else:
             return 0
 
+    # Printing The grid
+
     def print_grid(grid):
         print(grid[1].rjust(10) + " | " + grid[2] + " | " + grid[3])
         print("---+---+---".rjust(19))
@@ -39,13 +45,14 @@ def tic_tac_toe():
         print("")
     inp = input("Player 1, choose x or o :: ")
     print("")
-    if(inp=="x"):
+    if(inp == "x"):
         x = "X"
         o = "O"
     else:
         o = "X"
         x = "O"
 
+    # Checking for wrong inputs and printing the winners
 
     while if_won(grid) == 0:
         print_grid(grid)
@@ -67,11 +74,14 @@ def tic_tac_toe():
     print("-+-"*20)
 
 
-tic_tac_toe()
-while(True):
-    reply = input("Do you want to play again!!.. Enter y(YES) or n(NO)_ ")
-    if reply == "y":
-        tic_tac_toe()
-    elif reply == "n":
-        break
-input("Prees ENTER to exit..")
+if __name__ == "__main__":
+
+    tic_tac_toe()
+
+    while(True):
+        reply = input("Do you want to play again!!.. Enter y(YES) or n(NO)_ ")
+        if reply == "y":
+            tic_tac_toe()
+        elif reply == "n":
+            break
+    input("Prees ENTER to exit..")
